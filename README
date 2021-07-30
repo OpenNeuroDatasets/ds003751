@@ -1,0 +1,61 @@
+Overview
+--------
+This is the "Emotion" dataset. It was collected as part of a small
+scale replication project targeting the following reference:
+
+Matthias Schultze-Kraft et al.
+"Predicting Motor Intentions with Closed-Loop Brain-Computer Interfaces".
+In: Springer Briefs in Electrical and Computer Engineering.
+Springer International Publishing, 2017, pp. 79–90.
+
+In brief, it contains EEG data for 7 subjects raising either their left or right hand,
+thus giving rise to a lateralized readiness potential as measured with the EEG.
+For details, see the `Details about the experiment` section.
+
+
+Citing this dataset
+-------------------
+Please cite as follows:
+
+For more information, see the `dataset_description.json` file.
+
+
+License
+-------
+This eeg_emotion dataset is made available under the Open Database
+License: See the LICENSE file. A human readable information can be found at:
+
+https://opendatacommons.org/licenses/odbl/summary/
+
+Any rights in individual contents of the database are licensed under the
+Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/
+
+
+Format
+------
+The dataset is formatted according to the Brain Imaging Data Structure. See the
+`dataset_description.json` file for the specific version used.
+
+Generally, you can find data in the .tsv files and descriptions in the
+accompanying .json files.
+
+An important BIDS definition to consider is the "Inheritance Principle", which
+is described in the BIDS specification under the following link:
+
+The section states that:
+
+> Any metadata file (​.json​​,​.tsv​, etc.) may be defined at any directory
+level. The values from the top level are inherited by all lower levels unless
+they are overridden by a file at the lower level.
+
+
+Details about the experiment
+----------------------------
+For a detailed description of the task, see Schultze-Kraft et al. (2017)
+and the supplied `task-emotion_eeg.json` file.
+
+Short description about the experiment should be here.
+
+The original data was recorded in `.mff` format using NetStation. It is stored in the `/sourcedata`
+directory. To comply with the BIDS format, the .set format was converted to
+eeglab format.
