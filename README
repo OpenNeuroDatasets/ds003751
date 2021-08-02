@@ -1,15 +1,8 @@
 Overview
 --------
-This is the "Emotion" dataset. It was collected as part of a small
-scale replication project targeting the following reference:
+This is the "Emotion" dataset. The Dataset is recorded with naturalistic paradigm
 
-Matthias Schultze-Kraft et al.
-"Predicting Motor Intentions with Closed-Loop Brain-Computer Interfaces".
-In: Springer Briefs in Electrical and Computer Engineering.
-Springer International Publishing, 2017, pp. 79–90.
-
-In brief, it contains EEG data for 7 subjects raising either their left or right hand,
-thus giving rise to a lateralized readiness potential as measured with the EEG.
+In brief, it contains EEG, ECG and EMG data for 40 subjects emotionally stimulated using naturalistic emotion stimuli. The stimuli are multimedia videos providing context to understand the situated conceptualization of emotions.
 For details, see the `Details about the experiment` section.
 
 
@@ -31,31 +24,6 @@ Any rights in individual contents of the database are licensed under the
 Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/
 
 
-Format
+Dataset Description
 ------
-The dataset is formatted according to the Brain Imaging Data Structure. See the
-`dataset_description.json` file for the specific version used.
-
-Generally, you can find data in the .tsv files and descriptions in the
-accompanying .json files.
-
-An important BIDS definition to consider is the "Inheritance Principle", which
-is described in the BIDS specification under the following link:
-
-The section states that:
-
-> Any metadata file (​.json​​,​.tsv​, etc.) may be defined at any directory
-level. The values from the top level are inherited by all lower levels unless
-they are overridden by a file at the lower level.
-
-
-Details about the experiment
-----------------------------
-For a detailed description of the task, see Schultze-Kraft et al. (2017)
-and the supplied `task-emotion_eeg.json` file.
-
-Short description about the experiment should be here.
-
-The original data was recorded in `.mff` format using NetStation. It is stored in the `/sourcedata`
-directory. To comply with the BIDS format, the .set format was converted to
-eeglab format.
+Dataset\_description file described the metadata for the dataset. Participants related details are described in participants.json and participants.tsv files. Each subject directory contains two directories- beh and eeg. A tsv file inside beh folder having entries about the feedbacks given by subject on self-assessment scales-valence, arousal, dominance, liking, familiarity, relevance and emotion category. In addition, it contains the information about the time-stamp of mouse click and other details. The eeg folder inside subject directory contains the raw eeg data in .set \& .fdt format along with the information about task events in \_task-emotion\_events.tsv file. The stimuli directory contains stimuli which were used during the experiment. In addition, feedback excel sheet participant\_details.xlsx filled by participants is also added. The code directory contains the python code for data collection, python code for data validation and matlab file for pre-processing the raw data.
